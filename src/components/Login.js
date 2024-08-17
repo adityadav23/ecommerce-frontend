@@ -9,7 +9,7 @@ const Login = ({ onLogin }) => {
   const [submit, setSubmit] = useState(false);
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    setError("");
     console.log("Form submitted");
     try {
       const response = await api.post("/auth/login", { email, password });
